@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'CSS/register.css' %}">
+
+    <!-- External Links for fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <section class="register-section">
+        <h1>Welcome to <img src="{% static 'images/DOL_logo.png' %}" alt=""></h1>
+        <div class="main-section">
+            <div class="main-section-contents">
+                <div class="image-part">
+                    <img src="{% static 'GIFs/sign-up-animate.svg' %}" alt="">
+                </div>
+                <div class="details-part otp-details-part">
+                    <h1>Enter your OTP</h1>
+                    <form action="/otp_verification/" method="post" id="registrationForm">
+                        {% csrf_token %}
+                        <div class="otp-details">
+                            <div class="otp-details-content">
+                                <input type="number" name="otpnumber" id="" minlength="6" maxlength="6" placeholder="OTP sent to registered mail please...">
+                                {% if error_msg %}
+                                    <p style="margin-top: 1vh; color: red;">{{ error_msg }}</p>
+                                {% endif %}
+                                <div class="submit-button-part">
+                                    <input type="submit"  value="submit" style="padding-left: 0; text-align: center; color: gray;">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+</body>
+</html>

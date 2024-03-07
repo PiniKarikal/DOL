@@ -1,0 +1,159 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.register-section{
+  background-color: #c3bef7;
+}
+
+.register-section h1{
+   font-family: "Madimi One", sans-serif;
+  font-size: 55px;
+  display: flex;
+  justify-content: center;
+  padding: 5vh;
+}
+
+.register-section h1 img{
+  position: relative;
+  height: 50vh;
+  margin-top: -20vh;
+  margin-left: -10vw;
+}
+
+.main-section{
+  margin-top: -21.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 81.5vh;
+}
+
+.main-section-contents{
+  display: flex;
+  width: 60vw;
+}
+
+.image-part{
+  flex-basis: 30vw;
+}
+
+.image-part img{
+  height: 60vh;
+}
+
+.details-part{
+  background-color: #fff;
+  flex-basis: 30vw;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.details-part h1{
+  font-family: "Libre Baskerville", serif;
+  margin-top: -3vh;
+  font-size: 40px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  color: #8a4fff;
+}
+
+.details-part p{
+  font-family: "Cabin", sans-serif;
+  margin-top: -4vh;
+  margin-bottom: 3vh;
+  text-align: right;
+  padding-right: 1vw;
+}
+
+.details-part form{
+  margin-left: 5vw; 
+}
+
+.details-part form input{
+  text-align: left;
+  padding-left: 2vw;
+  display: block;
+  height: 4.5vh;
+  margin-bottom: 3vh;
+  border-radius: 15px;
+  background-color: transparent;
+  border: 1px solid #8a4fff;
+  color: black;
+  font-family: "Kode Mono", monospace;
+  font-weight: 700;
+}
+
+.details-part form input:focus{
+  outline: 2px solid #8a4fff;
+}
+
+.name-inputs{
+  display: flex;
+}
+
+.name-inputs input{
+  width: 9vw;
+  margin-right: 2vw;
+}
+
+.other-inputs input{
+  width: 20vw;
+}
+
+.other-inputs p{
+  margin-top: -3vh;
+  margin-left: 1vw;
+  margin-bottom: 3vh;
+  text-align: left;
+  font-family: "Cabin", sans-serif;
+  font-size: 12px;
+  color: red;
+}
+
+
+.details-part form input::placeholder{
+  color: #8a4fff;
+}
+
+.submit-button-part input{
+  width: 10vw;
+  text-align: center;
+  color: gray;
+  cursor: pointer;
+}
+
+.checkbox-part{
+  display: flex;
+}
+
+.checkbox-part p{
+  margin-top: 1vh;
+  font-family: "Cabin", sans-serif;
+}
+
+#myCheckbox{
+  outline: none;
+  margin-bottom: 1vh;
+}
+
+
+.otp-details{
+  height: 20vh;
+  display: flex;
+  align-items: center;
+}
+
+.otp-details-content input{
+  width: 20vw;
+}
+.submit-button-part input{
+  text-align: center;
+  width: 10vw;
+}
+
+.otp-details-part h1{
+  margin-top: 10vh;
+}

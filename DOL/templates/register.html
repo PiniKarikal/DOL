@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'CSS/register.css' %}">
+
+    <!-- External Links for fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <section class="register-section">
+        <h1>Welcome to <img src="{% static 'images/DOL_logo.png' %}" alt=""></h1>
+        <div class="main-section">
+            <div class="main-section-contents">
+                <div class="image-part">
+                    <img src="{% static 'GIFs/sign-up-animate.svg' %}" alt="">
+                </div>
+                <div class="details-part">
+                    <h1>Register Yourself</h1>
+                    <p>Already have an Account <a href="">Login Here</a></p>
+                    <form action="/register/" method="post" id="registrationForm">
+                        {% csrf_token %}
+                        <div class="name-inputs">
+                            <input type="text" name="fname" id="" placeholder="First Name">
+                            <input type="text" name="lname" id="" placeholder="Last Name">
+                        </div>
+                        <div class="other-inputs">
+                            <input type="email" name="email" id="" placeholder="Valid Mailid">
+                            {% if email_error %}
+                                <p>{{ email_error }}</p>
+                            {% endif %}
+                            <input type="password" name="password" id="" minlength="8" placeholder="password">
+                            <p style="color: black;">* password must be of 8 characters</p>
+                            <input type="password" name="confpassword" id="" minlength="8" placeholder="Confirm password">
+                            {% if password_error %}
+                                <p>{{ password_error }}</p>
+                            {% endif %}
+                            <input type="number" name="phonenumber" id="" minlength="10" maxlength="10" placeholder="Mobile number">
+                            {% if phone_number_error %}
+                                <p>{{ phone_number_error }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="checkbox-part" >
+                            <input type="checkbox" id="myCheckbox">
+                            <p>click me</p>
+                        </div>
+                        <div class="submit-button-part">
+                            <input type="submit" id="myButton" disabled onclick="checkboxDisable()" value="submit" style="padding-left: 0; text-align: center; color: gray;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="{% static 'JS/register.js' %}"> </script>
+</body>
+
+</html>
